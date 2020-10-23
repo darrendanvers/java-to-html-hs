@@ -1,0 +1,48 @@
+name:                java-to-html-hs
+version:             0.1.0.0
+github:              "darrendanvers/java-to-html-hs"
+license:             MIT
+author:              "Darren Danvers"
+maintainer:          "example@example.com"
+copyright:           "2020 Darren Danvers"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/darrendanvers/java-to-html-hs#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  java-to-html-hs-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - java-to-html-hs
+
+tests:
+  java-to-html-hs-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - java-to-html-hs

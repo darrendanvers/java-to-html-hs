@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 05bf9e5a0a066556009b3e992d030c9c478053a1ccbf487543e648cf6dde501e
+
+name:           java-to-html-hs
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/darrendanvers/java-to-html-hs#readme>
+homepage:       https://github.com/darrendanvers/java-to-html-hs#readme
+bug-reports:    https://github.com/darrendanvers/java-to-html-hs/issues
+author:         Darren Danvers
+maintainer:     example@example.com
+copyright:      2020 Darren Danvers
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/darrendanvers/java-to-html-hs
+
+library
+  exposed-modules:
+      Lexer
+  other-modules:
+      Paths_java_to_html_hs
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable java-to-html-hs-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_java_to_html_hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , java-to-html-hs
+  default-language: Haskell2010
+
+test-suite java-to-html-hs-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_java_to_html_hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , java-to-html-hs
+  default-language: Haskell2010
