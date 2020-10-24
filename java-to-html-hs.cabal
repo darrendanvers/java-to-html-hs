@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       Lexer
+      Parser
   other-modules:
       Paths_java_to_html_hs
   hs-source-dirs:

@@ -1,8 +1,12 @@
 module Main where
 
 import Lexer ( tokenize )
+import Parser ( validate )
 
 main :: IO ()
 main = do
     input <- getContents
-    print $ tokenize input
+    let tokens = tokenize input
+    print tokens
+    let parses = validate tokens
+    print parses
